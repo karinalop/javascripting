@@ -13,13 +13,14 @@ function talkingCalendar(date){ // date format YYYY/MM/DD
 
 function daySuffix(day) //Given a string of 2 characters returns sring 'st','nd','rd' or 'th'
 {
+  if(day ==='11')
+    return 'th';
   var d = parseInt(day[1]);
   switch(d){
     case 1:
       return 'st';
     case 2:
       return 'nd';
-      break;
     case 3:
       return 'rd';
     default:
